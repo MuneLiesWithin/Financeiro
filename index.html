@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <style>
+        fieldset {
+            font-weight: bolder;
+            border: solid black;
+            color:black;
+        }
+        #centro {
+            width: 400px; 
+            height: 280px; 
+            left: 50%; 
+            margin: -130px 0 0 -210px; 
+            padding: 10px;
+            position: absolute; 
+            top: 40%;
+        }
+        legend {
+            font-size: 20px;   
+        }
+    </style>
+    <script>
+        function cadastro(){
+            var x = document.getElementById("nome");
+            var y = document.getElementById("cpf");
+            var z = document.getElementById("data");
+            var w = document.getElementById("email");
+            if (x.value == "" || y.value == "" || z.value == "" || w.value == ""){
+                alert("Por favor insira todos os dados!");
+            }
+            else {
+                alert("Cadastro realizado com sucesso!\nConfira suas informacoes:\n\nNome: " + x.value + "\nCPF: " + y.value + "\nData de nascimento: " + z.value + "\nE-mail: " + w.value);    
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset id="centro">
+        <legend>Realize seu cadastro</legend>
+        Nome: <br>
+        <input placeholder="Digite seu nome" id="nome" />
+        <br>
+        <br>
+        CPF: <br>
+        <input placeholder="Digite seu CPF" id="cpf" />
+        <br>
+        <br>
+        Data de Nascimento: <br>
+        <input type="date" placeholder="Digite sua data de nascimento" id="data" />
+        <br>
+        <br>
+        E-mail: <br>
+        <input type="email" placeholder="Digite seu e-mail" id="email" />
+        <br>
+        <br>
+        <button onclick="cadastro()">Efetuar Cadastro</button>
+    </fieldset> 
+</body>
+</html>
